@@ -1,0 +1,8 @@
+
+type Query {
+    bookQuery: BookQuery
+}
+
+type Mutation {
+    bookMutation: BookMutation
+}

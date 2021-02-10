@@ -1,0 +1,1 @@
+package info.ttyy.frame.atomicservicedemo.infrastructure.graphql;

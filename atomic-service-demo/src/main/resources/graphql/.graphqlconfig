@@ -1,0 +1,13 @@
+{
+  "name": "Untitled GraphQL Schema",
+  "extensions": {
+    "endpoints": {
+      "Default GraphQL Endpoint": {
+        "headers": {
+          "user-agent": "JS GraphQL"
+        },
+        "introspect": false
+      }
+    }
+  }
+}

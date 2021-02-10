@@ -1,0 +1,13 @@
+
+mutation {
+    bookMutation {
+        addBook(bookName: "test-add-book-name", authorName: "test-add-author-name") {
+            id
+            bookName
+            author {
+                id
+                name
+            }
+        }
+    }
+}

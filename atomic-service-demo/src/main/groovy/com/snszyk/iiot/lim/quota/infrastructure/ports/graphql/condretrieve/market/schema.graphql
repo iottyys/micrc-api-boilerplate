@@ -1,0 +1,29 @@
+
+extend type MarketQuery {
+    CondRetrieve: CondRetrieveMarketQuery
+}
+
+extend type MarketMutation {
+    CondRetrieve: CondRetrieveMarketMutation
+}
+
+type CondRetrieveMarketQuery {
+    testQuery: String
+    retrieve(input: CondtionRetrieveInput!): [ConditionRetrieval!]
+}
+
+type CondRetrieveMarketMutation {}
+
+input CondtionRetrieveInput {
+    offset: Int
+    size: Int
+}
+
+type ConditionRetrieval {
+    id: String
+    name: String
+    code: String
+    type: String
+    typeName: String
+    values: [String]
+}

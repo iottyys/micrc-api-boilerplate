@@ -1,0 +1,1 @@
+package com.snszyk.iiot.lim.quota.domain.condition.repository;

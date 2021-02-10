@@ -1,0 +1,15 @@
+
+extend type MarketMutation {
+    CondMaintain: CondMaintainMarketMutation
+}
+
+extend type MarketQuery {
+    CondMaintain: CondMaintainMarketQuery
+}
+
+type CondMaintainMarketMutation {
+    testMutation(in: String): String
+}
+
+type CondMaintainMarketQuery {
+}

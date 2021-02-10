@@ -1,0 +1,5 @@
+<camelContext xmlns="http://camel.apache.org/schema/spring">
+    <route>
+        <from uri="direct:start" />
+    </route>
+</camelContext>

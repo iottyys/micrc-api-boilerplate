@@ -1,0 +1,22 @@
+
+type BookQuery {
+    books: BookPaged!,
+    findById: BookDTO!
+}
+
+type BookPaged {
+    books: [BookDTO]!
+    offset: Int!
+    size: Int!
+}
+
+type BookDTO {
+    id: ID!
+    bookName: String!
+    author: AuthorDTO
+}
+
+type AuthorDTO {
+    id: ID!
+    name: String!
+}

@@ -1,0 +1,15 @@
+
+type BookMutation {
+    addBook(bookName: String!, authorName: String!): BookWritten!
+}
+
+type BookWritten {
+    id: ID!
+    bookName: String!
+    author: AuthorWritten
+}
+
+type AuthorWritten {
+    id: ID!
+    name: String!
+}

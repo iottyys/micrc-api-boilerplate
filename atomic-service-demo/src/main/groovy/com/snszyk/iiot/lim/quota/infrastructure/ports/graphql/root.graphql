@@ -1,0 +1,11 @@
+
+type Query {
+    MarketQuery: MarketQuery
+}
+
+type Mutation {
+    MarketMutation: MarketMutation
+}
+
+type Subscription {
+}
