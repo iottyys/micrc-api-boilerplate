@@ -1,0 +1,9 @@
+query($input: CondtionRetrieveInput!) {
+    MarketQuery {
+        CondRetrieve {
+            retrieve(input: $input) {
+                id
+            }
+        }
+    }
+}

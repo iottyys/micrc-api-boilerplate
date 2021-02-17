@@ -2,12 +2,8 @@ package com.snszyk.iiot.lim.quota.domain.condition.vo;
 
 import com.snszyk.iiot.lim.quota.domain.condition.repository.ConditionRepository;
 
-import javax.validation.constraints.NotNull;
-
 public class ConditionInfo {
-    @NotNull
     private String name;
-    @NotNull
     private String code;
 
     public void check(ConditionRepository repository) {
