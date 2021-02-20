@@ -77,7 +77,6 @@ dependencies {
 
     // for camel
     implementation "org.apache.camel.springboot:camel-spring-boot-starter"
-    implementation "org.apache.camel.springboot:camel-jslt-starter"
     implementation "org.apache.camel.springboot:camel-bean-starter"
 
     // graphql

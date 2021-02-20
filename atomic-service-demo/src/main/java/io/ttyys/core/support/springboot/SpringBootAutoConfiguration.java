@@ -5,17 +5,20 @@ import org.apache.camel.CamelContext;
 import org.apache.camel.spring.boot.CamelContextConfiguration;
 import org.apache.camel.spring.boot.SpringBootCamelContext;
 import org.apache.camel.support.DefaultRegistry;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
 @Configuration
 @ComponentScan("io.ttyys.core")
-@EnableConfigurationProperties(SpringBootConfigurationProperties.class)
+@EnableConfigurationProperties({SpringBootConfigurationProperties.class})
 public class SpringBootAutoConfiguration {
+
     @Bean
-    CamelContextConfiguration contextConfiguration() {
+    public CamelContextConfiguration camelContextConfiguration() {
         return new CamelContextConfiguration() {
             @Override
             public void beforeApplicationStart(CamelContext camelContext) {
