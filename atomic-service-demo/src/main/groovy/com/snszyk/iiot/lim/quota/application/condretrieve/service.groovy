@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional
 @ApplicationService
 interface CondRetrieveService {
     @Transactional
-    @Execution(value = "direct:start", input = "", output = "")
+    @Execution(serviceEndpoint = "direct:start")
     def exec(input)
 }
 
