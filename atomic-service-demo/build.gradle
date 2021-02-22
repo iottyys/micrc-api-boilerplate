@@ -46,11 +46,21 @@ task copyGraphqlSchema(type: Copy) {
     }
 }
 
-task copyCamelRoutes(type: Copy) {
+task copyCamelRoutesAndDozerMappings(type: Copy) {
     copy {
         includeEmptyDirs false
         from('src/main/groovy') {
             include('**/*.xml')
+        }
+        into "$buildDir/classes/groovy/main"
+    }
+}
+
+task copyJsonSchemas(type: Copy) {
+    copy {
+        includeEmptyDirs false
+        from('src/main/groovy') {
+            include('**/*.schema.json')
         }
         into "$buildDir/classes/groovy/main"
     }
