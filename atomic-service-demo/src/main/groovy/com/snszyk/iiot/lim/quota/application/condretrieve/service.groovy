@@ -1,32 +1,32 @@
 package com.snszyk.iiot.lim.quota.application.condretrieve
 
-import io.ttyys.core.support.camel.ApplicationService
+import io.ttyys.core.support.architecture.EnhanceService
 import io.ttyys.core.support.camel.Execution
 import org.springframework.context.annotation.Primary
 import org.springframework.stereotype.Component
 import org.springframework.transaction.annotation.Transactional
 
-@ApplicationService
+@EnhanceService
 interface CondRetrieveService {
     @Transactional
-    @Execution(serviceEndpoint = "direct:start")
+    @Execution(serviceEndpoints = "direct:start")
     def exec(input)
 }
 
-@ApplicationService
+@EnhanceService
 interface CondSearchService {
     @Transactional
     def exec(input)
 }
 
-@ApplicationService
+@EnhanceService
 interface CondFilterService {
     def exec(input)
 }
 
-//@Component
-//@Primary
-//class CondRetrieveServiceImpl implements CondRetrieveService {
-//    String exec(String input) {
-//    }
-//}
+@Component
+@Primary
+class CondRetrieveServiceImpl implements CondRetrieveService {
+    String exec(input) {
+    }
+}

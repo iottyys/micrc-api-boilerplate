@@ -10,6 +10,3 @@ rootProject.name = 'atomic-service-demo'
 
 include 'ttyys-core'
 project(':ttyys-core').projectDir = file('../../ttyys-core')
-
-include 'camel-domain'
-project(':camel-domain').projectDir = file('../../camel-domain')
