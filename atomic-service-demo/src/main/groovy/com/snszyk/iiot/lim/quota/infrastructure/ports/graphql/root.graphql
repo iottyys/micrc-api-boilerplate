@@ -6,6 +6,3 @@ type Query {
 type Mutation {
     MarketMutation: MarketMutation
 }
-
-type Subscription {
-}

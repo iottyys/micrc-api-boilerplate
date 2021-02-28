@@ -5,7 +5,7 @@ import graphql.kickstart.tools.GraphQLQueryResolver
 import org.springframework.stereotype.Component
 
 @Component
-class CondMaintainMutationResolver implements GraphQLMutationResolver {
+class CondMaintainMutationResolver {
     String testMutation(String input) {
         println 'condition maintain for market belong to mutation'
         'condition maintain for market belong to mutation'
@@ -13,4 +13,4 @@ class CondMaintainMutationResolver implements GraphQLMutationResolver {
 }
 
 @Component
-class CondMaintainQueryResolver implements GraphQLQueryResolver {}
+class CondMaintainQueryResolver {}

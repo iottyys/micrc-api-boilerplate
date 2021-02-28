@@ -2,6 +2,7 @@ package com.snszyk.iiot.lim.quota.infrastructure.ports.graphql.condretrieve.mark
 
 import com.snszyk.iiot.lim.quota.application.condretrieve.CondRetrieveService
 import com.snszyk.iiot.lim.quota.domain.condition.ConditionRetrieval
+import com.snszyk.iiot.lim.quota.domain.condition.repository.ConditionRetrievalRepository
 import graphql.kickstart.tools.GraphQLMutationResolver
 import graphql.kickstart.tools.GraphQLQueryResolver
 
@@ -9,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
 
 @Component
-class CondRetrieveQueryResolver implements GraphQLQueryResolver {
+class CondRetrieveQueryResolver {
     String testQuery() {
         println 'condition retrieve for market service belong to query'
         'condition retrieve for market service belong to query'
@@ -17,13 +18,17 @@ class CondRetrieveQueryResolver implements GraphQLQueryResolver {
 
     @Autowired
     private CondRetrieveService service
+    @Autowired
+    private ConditionRetrievalRepository repository
 
     List<ConditionRetrieval> retrieve(input) {
         println service
-        List<ConditionRetrieval> retVal = service.exec(input)
+        println repository
+        service.exec(input)
+        repository.list()
         return new ArrayList<ConditionRetrieval>(0)
     }
 }
 
 @Component
-class CondRetrieveMutationResolver implements GraphQLMutationResolver {}
+class CondRetrieveMutationResolver {}

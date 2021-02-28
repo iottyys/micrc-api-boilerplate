@@ -4,13 +4,11 @@ import com.snszyk.iiot.lim.quota.infrastructure.ports.graphql.condmaintain.marke
 import com.snszyk.iiot.lim.quota.infrastructure.ports.graphql.condmaintain.market.CondMaintainQueryResolver
 import com.snszyk.iiot.lim.quota.infrastructure.ports.graphql.condretrieve.market.CondRetrieveMutationResolver
 import com.snszyk.iiot.lim.quota.infrastructure.ports.graphql.condretrieve.market.CondRetrieveQueryResolver
-import graphql.kickstart.tools.GraphQLMutationResolver
-import graphql.kickstart.tools.GraphQLQueryResolver
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
 
 @Component
-class MarketQueryResolver implements GraphQLQueryResolver {
+class MarketQueryResolver {
     @Autowired
     CondMaintainQueryResolver condMaintain
     @Autowired
@@ -18,7 +16,7 @@ class MarketQueryResolver implements GraphQLQueryResolver {
 }
 
 @Component
-class MarketMutationResolver implements GraphQLMutationResolver {
+class MarketMutationResolver {
     @Autowired
     CondMaintainMutationResolver condMaintain
     @Autowired
