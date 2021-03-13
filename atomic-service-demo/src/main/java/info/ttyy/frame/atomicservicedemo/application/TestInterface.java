@@ -4,5 +4,5 @@ import io.ttyys.algo.AlgorithmType;
 import io.ttyys.algo.text.annotation.Algorithm;
 
 @Algorithm(AlgorithmType.SIMILARITY)
-public class TestInterface {
+public interface TestInterface {
 }

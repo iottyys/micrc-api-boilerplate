@@ -82,8 +82,9 @@ dependencies {
     implementation project(':ttyys-core')
     annotationProcessor project(':ttyys-core')
 
-    implementation "org.apache.avro:avro:1.9.1"
-    implementation "org.apache.avro:avro-ipc:1.9.1"
+    implementation "org.apache.avro:avro:1.10.1"
+    implementation "org.apache.avro:avro-ipc:1.10.1"
+    implementation "org.apache.avro:avro-ipc-netty:1.10.1"
 
     // for language
     implementation "com.google.guava:guava:30.1-jre"
