@@ -37,7 +37,7 @@ class AlgoTest {
 
     @Test
     void test222() {
-        Transceiver t = new NettyTransceiver(new InetSocketAddress("192.168.1.10", 22222));
+        Transceiver t = new NettyTransceiver(new InetSocketAddress("127.0.0.1", 22222));
         Similarity proxy = SpecificRequestor.getClient(Similarity.class, t);
 
         Message message = new Message()
