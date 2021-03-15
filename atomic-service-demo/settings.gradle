@@ -10,3 +10,5 @@ rootProject.name = 'atomic-service-demo'
 
 include 'ttyys-core'
 project(':ttyys-core').projectDir = file('../../ttyys-core')
+include 'annotation-processor'
+project(':annotation-processor').projectDir = file('../../annotation-processor')
