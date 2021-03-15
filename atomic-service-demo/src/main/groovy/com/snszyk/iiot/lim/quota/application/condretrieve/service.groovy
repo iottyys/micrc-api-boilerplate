@@ -1,7 +1,7 @@
 package com.snszyk.iiot.lim.quota.application.condretrieve
 
 import io.ttyys.core.support.architecture.EnhanceService
-import io.ttyys.core.support.camel.Execution
+import io.ttyys.core.support.integration.Execution
 import org.springframework.context.annotation.Primary
 import org.springframework.stereotype.Component
 import org.springframework.transaction.annotation.Transactional

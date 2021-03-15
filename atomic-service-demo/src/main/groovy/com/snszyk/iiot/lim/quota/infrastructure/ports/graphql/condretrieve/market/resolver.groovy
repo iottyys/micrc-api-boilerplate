@@ -5,7 +5,7 @@ import com.snszyk.iiot.lim.quota.domain.condition.ConditionRetrieval
 import com.snszyk.iiot.lim.quota.domain.condition.repository.ConditionRetrievalRepository
 import graphql.kickstart.tools.GraphQLMutationResolver
 import graphql.kickstart.tools.GraphQLQueryResolver
-
+import io.ttyys.core.support.integration.Invoke
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
 
@@ -21,6 +21,7 @@ class CondRetrieveQueryResolver {
     @Autowired
     private ConditionRetrievalRepository repository
 
+//    @Invoke()
     List<ConditionRetrieval> retrieve(input) {
         println service
         println repository
